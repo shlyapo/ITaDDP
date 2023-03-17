@@ -9,8 +9,8 @@ Train application for information, purchase and management of railway tickets
 - View online scoreboard
 
 ## _layout
-- ![1](https://github.com/shlyapo/ITaDDP/lab2/layout/1.png)
-- ![1](https://github.com/shlyapo/ITaDDP/lab2/layout/2.png)
-- ![1](https://github.com/shlyapo/ITaDDP/lab2/layout/3.png)
-- ![1](https://github.com/shlyapo/ITaDDP/lab2/layout/4.png)
-- ![1](https://github.com/shlyapo/ITaDDP/lab2/layout/5.png)
+- ![1](https://github.com/shlyapo/ITaDDP/row/lab2/layout/1.png)
+- ![2](https://github.com/shlyapo/ITaDDP/row/lab2/layout/2.png)
+- ![3](https://github.com/shlyapo/ITaDDP/rom/lab2/layout/3.png)
+- ![4](https://github.com/shlyapo/ITaDDP/row/lab2/layout/4.png)
+- ![5](https://github.com/shlyapo/ITaDDP/row/lab2/layout/5.png)
