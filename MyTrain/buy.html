@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_buy.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -12,187 +12,197 @@
   </head>
   <body>
     <header>
-        <div class="navbar">
-          <div class="navbar-container">
-            <div class="logo-container">
-            <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
-            </div>
-            <div class="menu-container">
-              <ul class="menu-list">
-                <li class="menu-list-item active">
-                  <a href="buy.html" id="films-btn"> Buy tickets </a>
-                </li>
-                <li class="menu-list-item">
-                  <a href="board.html" id="ticket-btn"> Board </a>
-                </li>
-                <li class="menu-list-item">
-                    <a href="tickets.html" id="ticket-btn"> My tickets </a>
-                </li>
-              </ul>
-            </div>
-            <div class="profile-container">
-              <div class="profile-text-container">
-                <a class="profile-text" id="profile-btn">Profile</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="navbar">
+      <span style="font-size:30px;cursor:pointer; color: brown;" onclick="openNav()">☰ open</span>
+    </div>
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="buy.html" id="films-btn"> Buy tickets </a>
+          <a href="board.html" id="ticket-btn"> Board </a>
+          <a href="tickets.html" id="ticket-btn"> My tickets </a>
+  </div>
+
+</div>
+
+<span onclick="openNav()"></span> 
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
       </header>
 
     <main>
-      <div class="container">
-        <div class="content-container" id="content">
-          <div
-            class="featured-content"
-            style="
-              background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515),
-                url('img/background.jpg');
-            "
-          >
-            <img class="featured-title" src="img/snatch.jpg" alt="" />
-            <p class="featured-desc">
-              Description of the film. Film is very good. Buy our tickets.
-            </p>
-            <button class="featured-button">Buy ticket</button>
-          </div>
-          <div class="movie-list-container">
-            <h1 class="movie-list-title">NEW RELEASES</h1>
-            <div class="movie-list-wrapper">
-              <div class="movie-list">
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/1.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/2.jpeg" alt="" />
-                  <span class="movie-list-item-title">Star Wars</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/3.jpg" alt="" />
-                  <span class="movie-list-item-title">Storm</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/4.jpg" alt="" />
-                  <span class="movie-list-item-title">1917</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/5.jpg" alt="" />
-                  <span class="movie-list-item-title">Avengers</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/6.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/7.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="movie-list-container">
-            <h1 class="movie-list-title">NEW RELEASES</h1>
-            <div class="movie-list-wrapper">
-              <div class="movie-list">
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/8.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/9.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/10.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/11.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/12.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/1.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/1.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-              </div>
-            </div>
+      <div class="img">
+        <div class="bg-img">
+          <div class="container">
+            <table>
+              <thead>
+              <tr>
+                  <th>Символы</th>
+                  <th>Текст</th>
+                  <th>Цифры</th>
+              </tr>
+              <!-- Это строка содержит фильтры //-->
+              <tr>
+                  <td>
+                    <input id="regexp" />
+                  </td>
+                  <td>
+                    <input id="regexp1" />
+                  </td>
+                  <td>
+                      <label>Date</label>
+                  </td>
+              </tr>
+              </thead>
+              <!-- А вот на этот элемент нам нужно получить ссылку для передачи в filterTable //-->
+              <tbody id="target">
+              <tr>
+                  <td>B</td><td>Арбуз</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>B</td><td>Стрелок</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Стрелок</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>B</td><td>Стрелок</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>A</td><td>Арбуз</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>A</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>B</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Стрелок</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              <tr>
+                  <td>C</td><td>Фанат</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" id="ticket-btn"> Board </a></td>
+              </tr>
+              </tbody>
+          </table>
+          <script src="js/buy.js"></script>
+<script>
+  var filterTable = function (HTMLTBodyRef, aFilters) {
+    var rows = HTMLTBodyRef.getElementsByTagName("TR"),
+        filters = {}, n,
+        walkThrough = function (rows) {
+            var tr, i, f;
+            for (i = 0; i < rows.length; i += 1) {
+                tr = rows.item(i);
+                for(f in filters) {
+                    if (filters.hasOwnProperty(f)) {
+                        if (false === filters[f].validate(tr.children[f].innerText) ) {
+                            tr.style.display = "none"; break;
+                        } else {
+                            tr.style.display = "";
+                        }
+                    }
+                }
+            }
+        };
+    for(n in aFilters) {
+        if (aFilters.hasOwnProperty(n)) {
+            if (aFilters[n] instanceof filterTable.Filter) {
+                filters[n] = aFilters[n];
+            } else {
+                filters[n] = new filterTable.Filter(aFilters[n]);
+            }
+            filters[n]._setAction("onchange", function () {walkThrough(rows);});
+        }
+    }
+}
+filterTable.Filter = function (HTMLElementRef, callback, eventName) {
+    /* Если ф-цию вызвали не как конструктор фиксим этот момент: */
+    if (!(this instanceof arguments.callee)) {
+        return new arguments.callee(HTMLElementRef, callback, eventName);
+    }
+
+    /* Выравниваем пришедший аргумент к массиву */
+    this.filters = {}.toString.call(HTMLElementRef) == "[object Array]" ? HTMLElementRef : [HTMLElementRef];
+
+    /**
+     * Шаблонный метод вызывается для каждой строки таблицы, для соответствующей
+     * ячейки. Номер ячейки задается в объекте-конфигурации фильтров ф-ции
+     * filterTable (См. параметр 2 ф-ции tableFilter )
+     * @param String cellValue - строковое значение ячейки
+     * @returns {boolean}
+     */
+    this.validate = function (cellValue) {
+        for (var i = 0; i < this.filters.length; i += 1) {
+            if ( false === this.__validate(cellValue, this.filters[i], i) ) {
+                return false;
+            }
+        }
+    }
+
+    this.__validate = function (cellValue, filter, i) {
+        /* Если фильтр был создан явно и явно указана функция валидации: */
+        if (typeof callback !== "undefined") {
+            return callback(cellValue, this.filters, i);
+        }
+        /* Если в фильтр напихали пробелов или другой непечатной фигни - удаляем: */
+        filter.value = filter.value.replace(/^\s+$/g, "");
+        /* "Фильтр содержит значение и оно совпало со значением ячейки" */
+        return !filter.value || filter.value == cellValue;
+    }
+
+    this._setAction = function (anEventName, callback) {
+        for (var i = 0; i < this.filters.length; i += 1) {
+            this.filters[i][eventName||anEventName] = callback;
+        }
+    }
+};
+</script>
+<script>
+filterTable(document.getElementById("target"), {
+      0: new filterTable.Filter(document.getElementById("regexp"),
+        function(value, filters, i) {
+          return value.indexOf(filters[i].value) === 0;
+        },
+        "onkeyup"
+      ),
+
+      1:  new filterTable.Filter(document.getElementById("regexp1"),
+        function(value, filters, i) {
+          return value.indexOf(filters[i].value) === 0;
+        },
+        "onkeyup"
+      )
+
+    });
+</script>
           </div>
         </div>
       </div>
+
     </main>
 
-    <footer>
-      <div class="footer-bar">
-        <div class="footer-bar-container">
-          <a>Our phone: +375331337228</a>
-        </div>
-      </div>
-    </footer>
-
-    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

@@ -12,64 +12,93 @@
   </head>
   <body>
     <header>
-        <div class="navbar">
-          <div class="navbar-container">
-            <div class="logo-container">
-            <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
-            </div>
-            <div class="menu-container">
-              <ul class="menu-list">
-                <li class="menu-list-item active">
-                  <a href="buy.html" id="films-btn"> Buy tickets </a>
-                </li>
-                <li class="menu-list-item">
-                  <a href="board.html" id="ticket-btn"> Board </a>
-                </li>
-                <li class="menu-list-item">
-                    <a href="tickets.html" id="ticket-btn"> My tickets </a>
-                </li>
-              </ul>
-            </div>
-            <div class="profile-container">
-              <div class="profile-text-container">
-                <a class="profile-text" id="profile-btn">Profile</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="navbar">
+      <span style="font-size:30px;cursor:pointer; color: brown;" onclick="openNav()">☰ open</span>
+    </div>
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="buy.html" id="films-btn"> Buy tickets </a>
+          <a href="board.html" id="ticket-btn"> Board </a>
+          <a href="tickets.html" id="ticket-btn"> My tickets </a>
+  </div>
+
+</div>
+
+<span onclick="openNav()"></span> 
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
       </header>
 
     <main>
+      <div class="container">
       <table>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Points</th>
+          <th>Откуда</th>
+          <th>Куда</th>
+          <th>Время</th>
         </tr>
         <tr>
-          <td>Jill</td>
-          <td>Smith</td>
-          <td>50</td>
+          <td>Минск</td>
+          <td>Пинск</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
         </tr>
         <tr>
-          <td>Eve</td>
-          <td>Jackson</td>
-          <td>94</td>
+          <td>Могилев</td>
+          <td>Жлобин</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
         </tr>
         <tr>
-          <td>Adam</td>
-          <td>Johnson</td>
-          <td>67</td>
+          <td>Гомель</td>
+          <td>Витебск</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
+        </tr>
+        <tr>
+          <td>Минск</td>
+          <td>Гродно</td>
+          <td><time datetime="2018-09-23">15:23</time></td>
         </tr>
       </table>
-    </main>
-    <footer>
-      <div class="footer-bar">
-        <div class="footer-bar-container">
-          <a>Our phone: +375331337228</a>
-        </div>
       </div>
-    </footer>
+    </main>
 
     <script type="text/javascript" src="index.js"></script>
   </body>

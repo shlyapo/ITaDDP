@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style_tickets.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -12,119 +12,112 @@
   </head>
   <body>
     <header>
-        <div class="navbar">
-          <div class="navbar-container">
-            <div class="logo-container">
-            <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
-            </div>
-            <div class="menu-container">
-              <ul class="menu-list">
-                <li class="menu-list-item active">
-                  <a href="buy.html" id="films-btn"> Buy tickets </a>
-                </li>
-                <li class="menu-list-item">
-                  <a href="board.html" id="ticket-btn"> Board </a>
-                </li>
-                <li class="menu-list-item">
-                    <a href="tickets.html" id="ticket-btn"> My tickets </a>
-                </li>
-              </ul>
-            </div>
-            <div class="profile-container">
-              <div class="profile-text-container">
-                <a class="profile-text" id="profile-btn">Profile</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="navbar">
+      <span style="font-size:30px;cursor:pointer; color: brown;" onclick="openNav()">☰ open</span>
+    </div>
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="buy.html" id="films-btn"> Buy tickets </a>
+          <a href="board.html" id="ticket-btn"> Board </a>
+          <a href="tickets.html" id="ticket-btn"> My tickets </a>
+          <a href="login.html" id="ticket-btn"> Login </a>
+  </div>
+
+</div>
+
+<span onclick="openNav()"></span> 
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
       </header>
 
     <main>
-      <div class="container">
-        <div class="content-container" id="content">
-          <div
-            class="featured-content"
-            style="
-              background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515),
-                url('img/background.jpg');
-            "
-          >
-          <div class="movie-list-container">
-            <h1 class="movie-list-title">NEW RELEASES</h1>
-            <div class="movie-list-wrapper">
-              <div class="movie-list">
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/8.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/9.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/10.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/11.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/12.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/1.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-                <div class="movie-list-item">
-                  <img class="movie-list-item-img" src="img/1.jpg" alt="" />
-                  <span class="movie-list-item-title">Film</span>
-                  <p class="movie-list-item-desc">
-                    Description of the film. Film is very good. Buy our tickets.
-                  </p>
-                  <button class="movie-list-item-button">Buy ticket</button>
-                </div>
-              </div>
+      <div class="img">
+        <div class="bg-img">
+          <div class="container">
+          <div id="myBtnContainer grid">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('tr')"> Active</button>
+            <button class="btn" onclick="filterSelection('fal')"> Past</button>
+          </div>
+          
+          <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+          <div class="container-1 grid">
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv fal">12.02.2021</div>
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv tr">12.02.2024</div>
+            <div class="filterDiv fal">12.02.2021</div>
+          </div>
+          </div>
           </div>
         </div>
-      </div>
-        </div>
-      </div>
     </main>
 
-    <footer>
-      <div class="footer-bar">
-        <div class="footer-bar-container">
-          <a>Our phone: +375331337228</a>
-        </div>
-      </div>
-    </footer>
-
-    <script type="text/javascript" src="index.js"></script>
+    <script>
+      filterSelection("all")
+      function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("filterDiv");
+        if (c == "all") c = "";
+        for (i = 0; i < x.length; i++) {
+          w3RemoveClass(x[i], "show");
+          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+        }
+      }
+      
+      function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+      }
+      
+      function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+          while (arr1.indexOf(arr2[i]) > -1) {
+            arr1.splice(arr1.indexOf(arr2[i]), 1);     
+          }
+        }
+        element.className = arr1.join(" ");
+      }
+      
+      // Add active class to the current button (highlight it)
+      var btnContainer = document.getElementById("myBtnContainer");
+      var btns = btnContainer.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function(){
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
   </body>
 </html>
