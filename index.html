@@ -1,0 +1,135 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>MyTrain</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+      <span style="font-size:30px;cursor:pointer; color: brown;" onclick="openNav()">☰ open</span>
+    </div>
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="buy.html" id="films-btn"> Buy tickets </a>
+          <a href="board.html" id="ticket-btn"> Board </a>
+          <a href="tickets.html" id="ticket-btn"> My tickets </a>
+          <a href="login.html" id="ticket-btn"> Login </a>
+  </div>
+
+</div>
+
+<span onclick="openNav()"></span> 
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+      </header>
+
+    <main>
+      <div class="container">
+        <div class="content-container" id="content">
+          <div
+            class="featured-content"
+            style="
+              background: linear-gradient(to top, rgba(248, 31, 31, 0), rgb(237, 46, 46))
+            "
+          >
+          <div class="row">
+            <div class="column">
+              <div class="cont-1">
+                <img src="/images/f.jpg" alt="Avatar" class="image-1">
+                <div class="overlay-1">
+                  <div class="text">Hello World</div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="cont-2">
+                <img src="/images/ff.jpg" alt="Avatar" class="image-2">
+                <div class="overlay-2">
+                  <div class="text">Hello World</div>
+                </div>
+              </div>
+            </div>
+          </div> 
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside>
+        <div class="row">
+            <div class="card">
+              <img src="images/1.jpg" alt="Avatar" style="width:100%; max-height: 50%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/3.jpg" alt="Avatar" style="width:100%; max-height: 70%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/4.jpg" alt="Avatar" style="width:100%; max-height: 70%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/5.jpg" alt="Avatar" style="width:100%; max-height: 70%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/2.jpg" alt="Avatar" style="width:100%; max-height: 70%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/6.jpeg" alt="Avatar" style="width:100%; max-height: 100%;">
+              <div class="container-4">
+                <h4><b>HTML CSS</b></h4> 
+                <p>Architect & Engineer</p> 
+              </div>
+            </div>
+            
+        </div>
+    </aside>
+    <footer>
+      <div class="footer-bar">
+        <div class="footer-bar-container">
+          <a>Our phone: +375331337228</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
