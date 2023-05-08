@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_choose.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>MyTrain</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+      <span style="font-size:30px;cursor:pointer; color: brown;" onclick="openNav()">☰ open</span>
+    </div>
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="buy.html" id="films-btn"> Buy tickets </a>
+          <a href="board.html" id="ticket-btn"> Board </a>
+          <a href="tickets.html" id="ticket-btn"> My tickets </a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<span onclick="openNav()"></span> 
+<script>
+  function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+      </header>
+    <main>
+      <div class="img">
+        <div class="bg-img">
+          <div class="container">
+            <div id="myBtnContainer grid">
+              <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+              <button class="btn" onclick="filterSelection('tr')"> 1</button>
+              <button class="btn" onclick="filterSelection('fal')"> 2</button>
+            </div>
+            <div class="grid-init grid">
+              <button class="box-init box">1</button>
+              <button class="box-init box">2</button>
+              <button class="box-init box">3</button>
+              <button class="box-init box">4</button>
+          </div>
+          <div class="grid-init grid">
+            <button class="box-init box">1</button>
+            <button class="box-init box">2</button>
+            <button class="box-init box">3</button>
+            <button class="box-init box">4</button>
+        </div>
+        <div class="grid-init grid">
+          <button class="box-init box">1</button>
+          <button class="box-init box">2</button>
+          <button class="box-init box">3</button>
+          <button class="box-init box">4</button>
+      </div>
+      <div class="grid-init grid">
+        <button class="box-init box">1</button>
+        <button class="box-init box">2</button>
+        <button class="box-init box">3</button>
+        <button class="box-init box">4</button>
+    </div>
+          <div class="grid-init grid">
+            <button class="box-init box">5</button>
+            <button class="box-init box">6</button>
+            <button class="box-init box">7</button>
+            <button class="box-init box">8</button>
+        </div>
+          <div class="grid-init grid">
+          <button class="box-init box">9</button>
+          <button class="box-init box">10</button>
+          <button class="box-init box">11</button>
+          <button class="box-init box">12</button>
+        </div>
+          <div class="grid-init grid">
+        <button class="box-init box">13</button>
+        <button class="box-init box">14</button>
+        <button class="box-init box">15</button>
+        <button class="box-init box">16</button>
+        </div>
+        <div class="grid-init grid">
+      <button class="box-init box">17</button>
+      <button class="box-init box">18</button>
+      <button class="box-init box">19</button>
+      <button class="box-init box">20</button>
+        </div>
+        <div class="grid-init grid">
+    <button class="box-init box">17</button>
+    <button class="box-init box">18</button>
+    <button class="box-init box">19</button>
+    <button class="box-init box">20</button>
+        </div>
+        <div class="grid-init grid">
+  <button class="box-init box">17</button>
+  <button class="box-init box">18</button>
+  <button class="box-init box">19</button>
+  <button class="box-init box">20</button>
+      </div>
+        <div class="grid-init grid">
+  <button class="box-init box">17</button>
+  <button class="box-init box">18</button>
+  <button class="box-init box">19</button>
+  <button class="box-init box">20</button>
+      </div>
+          </div> 
+        </div>
+      </div>
+      
+
+    </main>
+
+  </body>
+
+</html>
