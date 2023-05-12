@@ -1,84 +1,40 @@
-export class Ticket {
+const tickets = {
+  "-2": "/src/images/ticket_with_registration-1.pdf",
+  "-1": "/src/images/ticket_with_registration-1.pdf",
+  "0": "/src/images/ticket_with_registration-1.pdf",
+  "1": "/src/images/ticket_with_registration-1.pdf",
+  "2": "/src/images/ticket_with_registration-1.pdf"
+};
 
-  static create(ticket) {
-    return fetch('https://podcast-app-15663.firebaseio.com/questions.json', {
-      method: 'POST',
-      body: JSON.stringify(question),
-      headers: {
-        'Content-Type': 'application/json'
+function listTicket()
+  { html= ""
+
+  var ke = JSON.parse(JSON.stringify(tickets));
+   let keys = Object.keys(tickets);
+   var key;
+   
+    for(key in keys)
+    {
+      html_sli = "<div class='filterDiv"
+      let c = Number(keys[key])
+      if(c < 0)
+      {
+        html_sli += " fal'>"
       }
-    })
-      .then(response => response.json())
-      .then(response => {
-        ticket.id = response.name
-        return ticket
-      })
-      .then(addToLocalStorage)
-      .then(Ticket.renderList)
-  }
-
-  static fetch(token) {
-    if (!token) {
-      return Promise.resolve('<p class="error">У вас нет токена</p>')
+      else {
+          html_sli += " tr'>"
+      }
+      html_sli += "<embed src='"
+      html_sli += ke[keys[key]]
+      html_sli += "' width=100% height=100% /> </div>"
+      html += html_sli
     }
-    return fetch(`https://mytrain-34919-default-rtdb.firebaseio.com/tickets.json?auth=${token}`)
-      .then(response => response.json())
-      .then(response => {
-        if (response && response.error) {
-          return `<p class="error">${response.error}</p>`
-        }
 
-        return response ? Object.keys(response).map(key => ({
-          ...response[key],
-          id: key
-        })) : []
-      })
+    return html
   }
 
-  static renderList() {
-    const questions = getQuestionsFromLocalStorage()
-
-    const html = questions.length
-      ? questions.map(toCard).join('')
-      : `<div class="mui--text-headline">Вы пока ничего не спрашивали</div>`
-
-    const list = document.getElementById('ticket')
-
-    list.innerHTML = html
-  }
-
-  static listToHTML(questions) {
-    return questions.length
-      ? `<ol>${questions.map(q => `<li>${q.text}</li>`).join('')}</ol>`
-      : '<p>Вопросов пока нет</p>'
-  }
-}
-customElements.define("ticket", Ticket);
-function foo(el) {
-  el.parentElement.parentElement.remove();
-}
-    
-
-
-function addToLocalStorage(question) {
-const all = getQuestionsFromLocalStorage()
-all.push(question)
-localStorage.setItem('tickets', JSON.stringify('tickets'))
-}
-
-function getQuestionsFromLocalStorage() {
-return JSON.parse(localStorage.getItem('tickets') || '[]')
-}
-
-function toCard(ticket) {
-return `
-  <ticket>
-    <a>    ${new URL(ticket).toLocaleDateString()} </a>
-    <div class="delete" onclick="foo(this)">Удалить</div>
-  </div>
-  <br>
-`
-}  
+var el = document.getElementById("conn");
+el.insertAdjacentHTML('afterbegin', listTicket());  
 
 filterSelection("all")
       function filterSelection(c) {
@@ -113,7 +69,7 @@ filterSelection("all")
       }
       
       // Add active class to the current button (highlight it)
-      var btnContainer = document.getElementById("myBtnContainer");
+      var btnContainer = document.getElementById("myBtnContainer grid");
       var btns = btnContainer.getElementsByClassName("btn");
       for (var i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click", function(){

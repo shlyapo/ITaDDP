@@ -1,9 +1,9 @@
 import { getDatabase, ref, onValue, set, remove } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
 
-export class Board {
+export class User {
   static async create(user) {
     const response = await fetch(
-      "https://mytrain-34919-default-rtdb.firebaseio.com/board.json",
+      "https://mytrain-34919-default-rtdb.firebaseio.com/users.json",
       {
         method: "POST",
         body: JSON.stringify(user),
@@ -33,24 +33,20 @@ export class Board {
   }
 
 
-  static async readBoardFromDB() {
-    let tickets = [];
-    try {
-      const db = getDatabase();
-      const ticketsRef = ref(db, `board`);
-      onValue(ticketsRef, (ticketsSnap) => {
-        ticketsSnap.forEach((ticketsChild) => {
-          console.log(ticketsRef)
-          console.log(ticketsSnap)
-          let ticket = ticketsChild
-          tickets.push(ticket);
-        });
-        console.log(tickets);
-        localStorage.setItem("board", JSON.stringify(tickets));
-      });
-    } catch (e) {
-      alert(e);
-    }
+  static async readTicketsFromDB(uid) {
+    fetch(`https://mytrain-34919-default-rtdb.firebaseio.com/users/wZL9yxB1y2QzCNNBCbNfw08ty3c2/tickets.json`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
   }
 
   static async deleteTicketsFromDB(uid) {

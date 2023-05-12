@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+.footer-bar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  bottom: 0%;
+}
+
+.footer-bar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  justify-content: flex-end;
+  font-family: "Sen", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+  font-family: "Sen", sans-serif;
+}
+
+
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.container {
+position: center;
+background-color: #151515;
+width: 100%;
+min-height: calc(100vh - 40px);
+color: rgb(238, 233, 233);
+}
+
+.featured-content {
+padding: 50px;
+}
+
+.row{
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+.column {
+  width: 20%;
+}
+
+
+.content {
+  background-color: rgb(15, 10, 10);
+  padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+      width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+  }
+}
+
+aside {
+background-color: #e9e8e83b;
+bottom: 0;
+max-width: 100%;
+max-height: 300px;	
+    overflow-y: auto;
+  }
+  
+img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  aside {
+  background-color: #9112093b;
+  display: flex;
+  max-width: 100%;
+  max-height: 200px;	
+      overflow-y: auto;
+    }
+
+  img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #ee2020;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #e42e2e;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+}
+}

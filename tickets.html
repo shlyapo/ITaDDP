@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style_tickets.css" />
+    <link rel="stylesheet" href="src/css/style_tickets.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
       rel="stylesheet"
@@ -21,11 +21,11 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
         <div class="overlay-content">
-          <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
-          <a href="buy.html" id="films-btn"> Buy tickets </a>
-          <a href="board.html" id="ticket-btn"> Board </a>
-          <a href="tickets.html" id="ticket-btn"> My tickets </a>
-          <a href="login.html" id="ticket-btn"> Login </a>
+          <a href="/index.html" class="logo" id="logo-btn">MyTrain</a>
+          <a href="/buy.html" id="films-btn"> Buy tickets </a>
+          <a href="/board.html" id="ticket-btn"> Board </a>
+          <a href="/tickets.html" id="ticket-btn"> My tickets </a>
+          <a href="/login.html" id="ticket-btn"> Login </a>
         </div>
 
       </div>
@@ -44,8 +44,7 @@
               <button class="btn" onclick="filterSelection('fal')"> Past</button>
             </div>
           
-            <div class="container-1 grid">
-              <ticket></ticket>
+            <div class="container-1 grid" id="conn">
             </div>
           </div>
         </div>

@@ -1,3 +1,14 @@
+
+
+function buyTickets(obj)
+{   
+    var l = document.querySelector("target")
+    var e = l.getElementById(obj.id);
+    console.log(e)
+    var txt = e.textContent || e.innerText;
+    alert(txt);
+}
+
 var filterTable = function (HTMLTBodyRef, aFilters) {
     var rows = HTMLTBodyRef.getElementsByTagName("TR"),
         filters = {}, n,
