@@ -1,16 +1,16 @@
 const tickets = {
   "oj5isoCD2zPh0cVUVCgiVnam7n13":{
-  "-2": "src/images/ticket_with_registration-1.pdf",
-  "-1": "src/images/ticket_with_registration-1.pdf",
-  "0": "src/images/ticket_with_registration-1.pdf",
-  "1": "src/images/ticket_with_registration-1.pdf",
-  "2": "src/images/ticket_with_registration-1.pdf"
+  "-2": "./src/images/ticket_with_registration-1.pdf",
+  "-1": "./src/images/ticket_with_registration-1.pdf",
+  "0": "./src/images/ticket_with_registration-1.pdf",
+  "1": "./src/images/ticket_with_registration-1.pdf",
+  "2": "./src/images/ticket_with_registration-1.pdf"
 },
 "wZL9yxB1y2QzCNNBCbNfw08ty3c2":
 {
-  "-2": "src/images/ticket_with_registration-1.pdf",
-  "1": "src/images/ticket_with_registration-1.pdf",
-  "2": "src/images/ticket_with_registration-1.pdf"
+  "-2": "./src/images/ticket_with_registration-1.pdf",
+  "1": "./src/images/ticket_with_registration-1.pdf",
+  "2": "./src/images/ticket_with_registration-1.pdf"
 },
 };
 
