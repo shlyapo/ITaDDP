@@ -33,21 +33,19 @@ export class Board {
   }
 
 
-  static async readBoardFromDB() {
+  static async readBoardFromDB(id) {
     let tickets = [];
     try {
-      const db = getDatabase();
-      const ticketsRef = ref(db, `board`);
-      onValue(ticketsRef, (ticketsSnap) => {
-        ticketsSnap.forEach((ticketsChild) => {
-          console.log(ticketsRef)
-          console.log(ticketsSnap)
-          let ticket = ticketsChild
-          tickets.push(ticket);
-        });
-        console.log(tickets);
-        localStorage.setItem("board", JSON.stringify(tickets));
-      });
+      const dbRef = ref(getDatabase());
+      get(child(dbRef, `users/${id}/tickets`)).then((snapshot) => {
+  if (snapshot.exists()) {
+    console.log(snapshot.val());
+  } else {
+    console.log("No data available");
+  }
+}).catch((error) => {
+  console.error(error);
+});
     } catch (e) {
       alert(e);
     }

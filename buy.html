@@ -18,10 +18,8 @@
        <!-- The overlay -->
       <div id="myNav" class="overlay">
 
-  <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-  <!-- Overlay content -->
         <div class="overlay-content">
           <a href="index.html" class="logo" id="logo-btn">MyTrain</a>
           <a href="buy.html" id="films-btn"> Buy tickets </a>
@@ -54,7 +52,6 @@
                   <th>Куда</th>
                   <th>Дата</th>
               </tr>
-              <!-- Это строка содержит фильтры //-->
               <tr>
                   <td>
                     <input id="regexp" />
@@ -67,44 +64,8 @@
                   </td>
               </tr>
               </thead>
-              <!-- А вот на этот элемент нам нужно получить ссылку для передачи в filterTable //-->
               <tbody id="target">
-              <tr id="1">
-                  <td id="1">Минск</td><td id="2">Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn" id="1 onclick=buyTickets(this)"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
-              <tr>
-                  <td>Минск</td><td>Москва</td><td><time datetime="2018-09-23">в прошлую субботу</time></td><td><a href="choose_seat.html" class="ticket-btn"> Board </a></td>
-              </tr>
+              
               </tbody>
           </table>
           <script src="js/buy.js"></script>
@@ -139,21 +100,12 @@
     }
 }
 filterTable.Filter = function (HTMLElementRef, callback, eventName) {
-    /* Если ф-цию вызвали не как конструктор фиксим этот момент: */
     if (!(this instanceof arguments.callee)) {
         return new arguments.callee(HTMLElementRef, callback, eventName);
     }
 
-    /* Выравниваем пришедший аргумент к массиву */
     this.filters = {}.toString.call(HTMLElementRef) == "[object Array]" ? HTMLElementRef : [HTMLElementRef];
 
-    /**
-     * Шаблонный метод вызывается для каждой строки таблицы, для соответствующей
-     * ячейки. Номер ячейки задается в объекте-конфигурации фильтров ф-ции
-     * filterTable (См. параметр 2 ф-ции tableFilter )
-     * @param String cellValue - строковое значение ячейки
-     * @returns {boolean}
-     */
     this.validate = function (cellValue) {
         for (var i = 0; i < this.filters.length; i += 1) {
             if ( false === this.__validate(cellValue, this.filters[i], i) ) {
@@ -163,13 +115,10 @@ filterTable.Filter = function (HTMLElementRef, callback, eventName) {
     }
 
     this.__validate = function (cellValue, filter, i) {
-        /* Если фильтр был создан явно и явно указана функция валидации: */
         if (typeof callback !== "undefined") {
             return callback(cellValue, this.filters, i);
         }
-        /* Если в фильтр напихали пробелов или другой непечатной фигни - удаляем: */
         filter.value = filter.value.replace(/^\s+$/g, "");
-        /* "Фильтр содержит значение и оно совпало со значением ячейки" */
         return !filter.value || filter.value == cellValue;
     }
 

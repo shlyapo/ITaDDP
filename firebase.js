@@ -12,7 +12,12 @@ const firebaseConfig = {
 
   messagingSenderId: "557682534482",
 
-  appId: "1:557682534482:web:8983330ed1550df115178b"
+  appId: "1:557682534482:web:8983330ed1550df115178b",
+
+    "rules": {
+      ".read": "now < 1685653200000",  // 2023-6-2
+      ".write": "now < 1685653200000",  // 2023-6-2
+    }
 
 };
 

@@ -22,6 +22,7 @@ window.enter = async function() {
   }
 
 window.board = async function() {
+  debugger
         await Board.readBoardFromDB();
 }
 

@@ -40,42 +40,38 @@ const buy = {
         seats: [2,3,6,10,19,25,32, 33, 36,40,41,44],
         time: "15.06.2023"
     }
-  };
+  }; 
 
-function getTable()
-{   var l = JSON.stringify(buy);
-    html= ""
-    localStorage.setItem("buy", l);
-    s = Object.keys(buy)
-    for(ss in s)
-    {
-        var info = Object.values(buy[s[ss]]);
-        var html_sli = ""
-        html_sli += "<tr> <td>"
-        html_sli += info[0][0]
-        html_sli += "</td><td>"
-        html_sli += info[0][1]
-        html_sli += "</td><td>"
-        html_sli += info[2]
-        html_sli += "</td><td><button class='ticket-btn' id='"
-        html_sli += ss
-        html_sli += "'onclick='buyTickets("
-        html_sli += ss
-        html_sli += ")'> Board </a></td></tr>"
-        html += html_sli
-    }
-    return html
-}
-
-function buyTickets(id)
+function getTickets()
 {   
-    console.log(id);
-    localStorage.setItem("buy_id", id)
-    window.location.href = 'choose_seat.html';
+    var buy_id = JSON.stringify(localStorage.getItem("buy_id"));
+    var seast_num = JSON.stringify(localStorage.getItem("num_seat"));
+    buy_id = JSON.parse(buy_id);
+    seast_num = JSON.parse(seast_num)
+    console.log(seast_num)
+    var s = Object.keys(buy)
+    for(ss in s)
+    {   
+        if(ss==buy_id)
+        {
+            var info = Object.values(buy[s[ss]]);
+            html= "<p align='center' style='color:#f78b10a2; font-size:30px'>"
+            html += "Выбрано место: "
+            html += seast_num
+            html += "<br>Поезд:"
+            for(d in info[0])
+            {
+                html+="<br>" + info[0][d]
+            }
+            html+="<br>" + info[2]
+            html += "</p>"
+            console.log(info)
+            return html
+        }
+    }
+    
+    
 }
 
-var el = document.getElementById("target");
-el.insertAdjacentHTML('afterbegin', getTable());
-
-
-
+var el = document.getElementById("ss");
+el.insertAdjacentHTML('beforeend', getTickets());

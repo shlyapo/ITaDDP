@@ -1,23 +1,38 @@
 const tickets = {
+  "oj5isoCD2zPh0cVUVCgiVnam7n13":{
   "-2": "/src/images/ticket_with_registration-1.pdf",
   "-1": "/src/images/ticket_with_registration-1.pdf",
   "0": "/src/images/ticket_with_registration-1.pdf",
   "1": "/src/images/ticket_with_registration-1.pdf",
   "2": "/src/images/ticket_with_registration-1.pdf"
+},
+"wZL9yxB1y2QzCNNBCbNfw08ty3c2":
+{
+  "-2": "/src/images/ticket_with_registration-1.pdf",
+  "1": "/src/images/ticket_with_registration-1.pdf",
+  "2": "/src/images/ticket_with_registration-1.pdf"
+},
 };
 
-function listTicket()
+function listTicket(user_id)
   { html= ""
-
-  var ke = JSON.parse(JSON.stringify(tickets));
-   let keys = Object.keys(tickets);
+  console.log(user_id)
+  var l = JSON.stringify(tickets);
+  var ke = JSON.parse(l);
+  var l = Object.keys(ke)
    var key;
-   
-    for(key in keys)
+   var newStr = user_id.replace(/"/g, '');
+    for(key in l)
     {
+      if(newStr == l[key])
+      {
+        var s = ke[newStr]
+        var ss = Object.keys(s)
+        for(sr in ss)
+        {
+        console.log(sr)
       html_sli = "<div class='filterDiv"
-      let c = Number(keys[key])
-      if(c < 0)
+      if(ss[sr] < 0)
       {
         html_sli += " fal'>"
       }
@@ -25,16 +40,19 @@ function listTicket()
           html_sli += " tr'>"
       }
       html_sli += "<embed src='"
-      html_sli += ke[keys[key]]
+      html_sli += s[ss[sr]]
       html_sli += "' width=100% height=100% /> </div>"
       html += html_sli
     }
+    }
+  }
 
     return html
   }
 
+var us_id = localStorage.getItem("UID") 
 var el = document.getElementById("conn");
-el.insertAdjacentHTML('afterbegin', listTicket());  
+el.insertAdjacentHTML('afterbegin', listTicket(us_id));  
 
 filterSelection("all")
       function filterSelection(c) {
