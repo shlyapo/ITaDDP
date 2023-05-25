@@ -32,7 +32,7 @@ signInForm.addEventListener('submit', (e) => {
               };
               localStorage.setItem("ticket", JSON.stringify(tickets));
             console.log('User is logged in');
-            window.location.href = "./index.html";
+            window.location.href = "index.html";
         })
         .catch((error) => {
             const errorCode = error.code;
